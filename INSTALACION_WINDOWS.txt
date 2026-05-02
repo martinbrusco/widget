@@ -1,0 +1,38 @@
+Instalacion en Windows 11 — Widget Clima / Sistema / Deportes
+==============================================================
+
+1) Python 3.11 o superior
+   - Descarga: https://www.python.org/downloads/windows/
+   - Durante la instalacion, marca "Add python.exe to PATH".
+   - O en terminal (PowerShell como usuario):
+       winget install Python.Python.3.12
+
+   Comprueba en CMD o PowerShell:
+       py --version
+     o
+       python --version
+
+2) FFmpeg (recomendado — MP3, fusion de video y descargas yt-dlp)
+       winget install Gyan.FFmpeg
+     Reinicia la terminal y comprueba:
+       ffmpeg -version
+
+3) Ejecutar el widget
+   - Doble clic en:  run.bat
+   - O desde la carpeta del proyecto en CMD:
+       run.bat
+
+   La primera vez instalara las librerias Python en la subcarpeta .\vendor
+   (igual que en Linux).
+
+4) Atajo / inicio automatico
+   - Clic derecho en la ventana del widget -> "Iniciar con el sistema"
+     (crea un lanzador en la carpeta Inicio de Windows).
+
+5) Limitaciones respecto a Linux
+   - Turbo Boost, ventilador ASUS, sensores /sys, pkexec: no aplican en Windows;
+     esas secciones pueden estar vacias u ocultas.
+   - El resto (clima, deportes, noticias, descargas con yt-dlp, sistema basico
+     con psutil donde exista en Windows) funciona igual.
+
+Soporte: revisa que el antivirus no bloquee pip o python.
